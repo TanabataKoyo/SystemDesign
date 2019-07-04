@@ -32,32 +32,32 @@ public class Entry extends HttpServlet {
     }
 
     //post
-//         protected void doPost(HttpServletRequest request, HttpServletResponse response)
-//             throws ServletException, IOException {
-//         request.setCharacterEncoding("UTF-8");
-//         try {
-//             String userName = request.getParameter("name");
-//             String studentid = request.getParameter("id");
+        protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        try {
+            String userName = request.getParameter("name");
+            String studentid = request.getParameter("id");
 
-//             UserService userService = new UserService();
-//             User user = userService.login(userName, studentid);
+            UserService userService = new UserService();
+            User user = userService.entry(userName, studentid);
 
-//             if (user.getName() == null && user.getPass() == null) {
-//                 response.sendRedirect("/QUESTION_SYSTEM/Entry");
-//             }
-//             String entry = "entry";
-//             request.setAttribute("entry",entry);
-//             //sessionにログイン情報
-//             HttpSession session = request.getSession();
-//             session.setAttribute("user", user);
-//             //ログインしたユーザの情報(User user)をフォワードする
-//             request.setAttribute("user", user);
-//             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/users/home.jsp");
-//             dispatcher.forward(request, response);
+            if (user.getName() == null && user.getId() == null) {
+                response.sendRedirect("/QUESTION_SYSTEM/Entry");
+            }
+            String entry = "entry";
+            request.setAttribute("entry",entry);
+            //sessionにログイン情報
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+            //ログインしたユーザの情報(User user)をフォワードする
+            request.setAttribute("user", user);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/users/home.jsp");
+            dispatcher.forward(request, response);
 
-//         } catch (Exception e) {
-//             // TODO: handle exception
-//         }
-//     }
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+    }
 
 }
