@@ -9,7 +9,7 @@ public class User {
 
     }
     //コンストラクタ
-    public void user(int id,String name) {
+    public void user(String name,int id) {
         this.id = id;
         this.name = name;
     }
@@ -28,10 +28,5 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getErrorMessage() {
-        String actual = "userNameは必須項目です.";
-        return actual;
     }
 }

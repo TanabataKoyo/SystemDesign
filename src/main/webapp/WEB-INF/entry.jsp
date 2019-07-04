@@ -22,8 +22,5 @@
         <div class="uk-margin">
             <button class="uk-button uk-button-primary">登録</button>
         </div>
-    </form>
-    <a href="/Sample/User/Create" class="uk-button uk-button-link">新規登録はこちらから</a>
-</div>
 </body>
 </html>
