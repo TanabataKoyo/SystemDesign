@@ -1,7 +1,7 @@
 package model;
 
 public class User {
-    private int id;
+    private String id;
     private String name;
 
     //空のコンストラクタを作成；user作成時に最初に用意しておく用
@@ -9,16 +9,16 @@ public class User {
 
     }
     //コンストラクタ
-    public void user(String name,int id) {
+    public void user(String name,String id) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String  id) {
         this.id = id;
     }
 

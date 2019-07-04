@@ -16,7 +16,7 @@ public class PostDao extends DriverAccessor {
             PreparedStatement statement = connection.prepareStatement(entry);
 
             statement.setString(1,post.getUserName());
-            statement.setInt(2,post.getStudentId());
+            statement.setString(2,post.getStudentId());
 
             statement.executeUpdate();
             statement.close();

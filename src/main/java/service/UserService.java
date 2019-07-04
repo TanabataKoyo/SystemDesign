@@ -18,7 +18,7 @@
          this.connection = null;
      }
 
-     public User entry(String userName, Integer studentId) {
+     public User entry(String userName, int studentId) {
          UsersDao dao = new UsersDao();
          createConnection(dao);
          dao.entry(userName, studentId, connection);

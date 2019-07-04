@@ -10,7 +10,7 @@
      //CRUDのSQL文
      public static final String getById = "select * from users where user_id = ?"; //IDを引数にユーザを取得するSQL文
      public static final String getByName = "select * from users where name = ?"; //ユーザ名を引数にユーザを取得するSQL文
-     public static final String entry = "insert into users(name,id)values(?,?)"; //ユーザ登録のSQL文
+     public static final String entry = "insert into student(name,id) values(?,?)"; //ユーザ登録のSQL文
      public static final String update = "update users set name = ?,id = ? where user_id = ?"; //ユーザ情報更新のSQL文
 
 
