@@ -1,4 +1,4 @@
-package controller.users;
+package users;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -1,4 +1,4 @@
-package controller.post;
+package post;
 
 public class EntryPost {
 }

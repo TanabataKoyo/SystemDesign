@@ -1,14 +1,17 @@
 package servlet;
 
 
-import controller.control.StudentManager;
 import model.User;
+import control.UserManager;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 
 @WebServlet("/EntryInfo")
 
@@ -16,21 +19,33 @@ import java.io.IOException;
 
     private static final long serialVersionUID = 1L;
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws SecurityException, IOException{
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/home.jsp");
+        dispatcher.forward(request,response);
+
+
+    }
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        // requestオブジェクトの文字エンコーディングの設定
         request.setCharacterEncoding("UTF-8");
 
 
-        String userName = request.getParameter("userName");
-        Integer studentId = request.getIntHeader("studentId");
 
-        User user = new User(userName, studentId);
+        String name = request.getParameter("name");
+        int id =   Integer.parseInt(request.getParameter("id"));
 
-        StudentManager manager = new StudentManager();
+        User user = new User(name,id);
+        System.out.println("id"+user.getId());
+        UserManager manager = new UserManager();
+
 
         manager.entry(user);
 
         //成功画面を表示
         System.out.println("登録完了");
-        response.sendRedirect("/Question_System/EntryInfo");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/EntryUserSuccess.jsp");
+        dispatcher.forward(request,response);
     }
 }

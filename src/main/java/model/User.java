@@ -1,24 +1,25 @@
 package model;
 
 public class User {
-    private String id;
+    private Integer id;
     private String name;
 
     //空のコンストラクタを作成；user作成時に最初に用意しておく用
     public void user() {
 
+
     }
     //コンストラクタ
-    public void user(String name,String id) {
+    public  User(String name,Integer id) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String  id) {
+    public void setId(int id) {
         this.id = id;
     }
 
