@@ -7,9 +7,7 @@
     <title>学生情報登録</title>
 </head>
 <body>
-    <link rel="stylesheet" href="./css/uikit.css">
-       <script src="./js/uikit.js">
-       </script>
+<jsp:include page="../helperUIkit.html"/>
 <div class="uk-container uk-container-large">
     <form class="uk-grid-small" action="EntryInfo"
           method="post">

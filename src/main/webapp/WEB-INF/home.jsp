@@ -17,9 +17,8 @@
     <title>ホーム画面</title>
 </head>
 <body>
-    <link rel="stylesheet" href="uikit.min.css">
-    <script src="uikit.min.js">
-    </script>
+<jsp:include page="../helperUIkit.html"/>
+<div class="uk-container uk-container-large">
 
     <div class="uk-container uk-container-large">
 

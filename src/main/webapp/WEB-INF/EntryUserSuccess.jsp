@@ -11,6 +11,8 @@
     <TITLE></TITLE>
 </HEAD>
 <BODY bgcolor="gold">
+<jsp:include page="../helperUIkit.html"/>
+<div class="uk-container uk-container-large">
 <P align="center"><FONT size="6"><BR>
     <BR>
     登録に成功しました！！</FONT></P>
