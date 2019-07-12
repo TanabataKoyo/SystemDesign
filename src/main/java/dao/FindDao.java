@@ -1,9 +1,10 @@
 package dao;
 
-import java.sql.*;
-import java.util.List;
+import model.Question;
 
-public class ListDao {
+import java.sql.*;
+
+public class PrintDao {
     private final static String DRIVER_URL = "jdbc:mysql://localhost:3306/question_system?useUnicode=true&characterEncoding=UTF-8&useSSL=false";
     private final static String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private final static String USER_NAME = "root";
@@ -23,12 +24,12 @@ public class ListDao {
         return null;
     }
 
-    public List list(Student student, Connection connection){
+    public Question print(Question question, Connection connection){
 
         try{
 
             //  SQLコマンド
-            String sql = "select * from answer where student_id = '" + student.getStudentID() + "'";
+            String sql = "select * from question where author_id = '" + question.getUserId() + "'";
 
             //  SQLのコマンドを実行する
             //  実行結果はrsに格納される
@@ -38,15 +39,16 @@ public class ListDao {
             rs.first();
 
             //  rsからそれぞれの情報を取り出し、Studentオブジェクトに設定する
-            student.setStudentName(rs.getString("student_name"));
-            student.setStudentBirthplace(rs.getString("student_birthplace"));
+            question.setUserId(rs.getInt("author_id"));
+            question.setQuestionItem(rs.getString("question_item"));
+            question.setQuestionItemId(rs.getInt("question_item_id"));
 
             //  終了処理
             stmt.close();
             rs.close();
 
             //  Studentオブジェクトを返す
-            return student;
+            return question;
 
         }catch(SQLException e){
 
@@ -55,9 +57,7 @@ public class ListDao {
             return null;
 
         }finally{
+
         }
     }
-
-}
-
 }
