@@ -4,7 +4,7 @@ import model.Question;
 
 import java.sql.*;
 
-public class PrintDao {
+public class FindDao {
     private final static String DRIVER_URL = "jdbc:mysql://localhost:3306/question_system?useUnicode=true&characterEncoding=UTF-8&useSSL=false";
     private final static String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private final static String USER_NAME = "root";
@@ -24,25 +24,26 @@ public class PrintDao {
         return null;
     }
 
-    public Question print(Question question, Connection connection){
+    public Question find(Question question, Connection connection){
 
         try{
 
             //  SQLコマンド
-            String sql = "select * from question where author_id = '" + question.getUserId() + "'";
+            String sql = "select * from question where author_id = ? ";
+            PreparedStatement stmt = connection.prepareStatement(sql);
 
+//            stmt.setInt(2,question.getQuestionItemId());
+            stmt.setInt(1,question.getUserId());
             //  SQLのコマンドを実行する
             //  実行結果はrsに格納される
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs =  stmt.executeQuery();
 
             rs.first();
 
-            //  rsからそれぞれの情報を取り出し、Studentオブジェクトに設定する
+            //  rsからそれぞれの情報を取り出し、Questionオブジェクトに設定する
             question.setUserId(rs.getInt("author_id"));
             question.setQuestionItem(rs.getString("question_item"));
             question.setQuestionItemId(rs.getInt("question_item_id"));
-
             //  終了処理
             stmt.close();
             rs.close();

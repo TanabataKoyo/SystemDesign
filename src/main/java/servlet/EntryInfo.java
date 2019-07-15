@@ -1,8 +1,8 @@
 package servlet;
 
 
-import model.User;
 import control.UserManager;
+import model.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

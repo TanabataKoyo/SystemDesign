@@ -1,13 +1,14 @@
 package dao;
 
-import users.Responsing;
+import model.Answer;
+import model.Question;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class ResponsingDao {
+public class AnswerDao {
 
     private final static String DRIVER_URL = "jdbc:mysql://localhost:3306/question_system?useUnicode=true&characterEncoding=UTF-8&useSSL=false";
     private final static String DRIVER_NAME = "com.mysql.jdbc.Driver";
@@ -35,22 +36,23 @@ public class ResponsingDao {
         }catch(Exception ex){}
     }
 
-    public void responsing(Responsing responsing, Connection connection){
+    public void reply(Answer answer,Question question, Connection connection){
 
         try{
 
             //  SQLコマンド
-            String sql = "insert into answer() value(?, ?, ?, ?, ?)";
+            String sql = "insert into answer(question_item_id,respondent_id,question_item,author_id,answer_content,answer_rank) value(?, ?, ?, ?, ?, ?)";
 
             //  SQLコマンドの実行
             PreparedStatement stmt = connection.prepareStatement(sql);
 
             //  SQLコマンドのクエッションマークに値を、1番目から代入する
-            stmt.setInt(5,responsing.getRespondantId());
-            stmt.setString(4, responsing.get());
-            stmt.setString(3, responsing.getQuestionItem());
-            stmt.setInt(2,responsing.getAuthorId());
-            stmt.setInt(1,responsing.getQuestionItemId());
+            stmt.setInt(6,answer.getAnswerRank());
+            stmt.setString(5,answer.getAnswerContent());
+            stmt.setInt(4, question.getUserId());
+            stmt.setString(3, answer.getAnswerContent());
+            stmt.setInt(2,answer.getRespondentId());
+            stmt.setInt(1,question.getQuestionItemId());
 
 
 

@@ -38,23 +38,43 @@ public class UsersDao {
 
     public void entry(User user, Connection connection){
 
-        try{
+            try{
+
+                //  SQLコマンド
+                String sql = "insert into student(student_name, user_id) values(?, ?)";
+
+                //  SQLコマンドの実行
+                PreparedStatement stmt = connection.prepareStatement(sql);
+
+                //  SQLコマンドのクエッションマークに値を、1番目から代入する
+                stmt.setString(1, user.getName());
+                stmt.setInt(2,user.getId());
+
+
+
+                stmt.executeUpdate();
+
+            }catch(SQLException e){
+
+//			エラーが発生した場合、エラーの原因を出力する
+                e.printStackTrace();
+
+            }
+    }
+
+    public void delete(int id, Connection connection) {
+
+        try {
 
             //  SQLコマンド
-            String sql = "insert into student(student_name, user_id) values(?, ?)";
+            String sql = "delete from users where user_id = ?"; //IDを引数にユーザを削除するSQL文
 
             //  SQLコマンドの実行
             PreparedStatement stmt = connection.prepareStatement(sql);
 
-            //  SQLコマンドのクエッションマークに値を、1番目から代入する
-            stmt.setString(1, user.getName());
-            stmt.setInt(2,user.getId());
-
-
-
             stmt.executeUpdate();
 
-        }catch(SQLException e){
+        } catch (SQLException e) {
 
 //			エラーが発生した場合、エラーの原因を出力する
             e.printStackTrace();

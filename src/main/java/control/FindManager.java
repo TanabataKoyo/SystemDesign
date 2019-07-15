@@ -1,28 +1,30 @@
 package control;
 
-import dao.PrintDao;
+import dao.FindDao;
 import model.Question;
 
 import java.sql.Connection;
 
 
-public class PrintManager {
+public class FindManager {
 
     private Connection connection = null;
 
-    public PrintManager() {
+    public FindManager() {
 
     }
 
-    public Question print(Question question) {
+    public Question find(Question question) {
 
-        PrintDao printDao = new PrintDao();
+        FindDao findDao = new FindDao();
 
-        this.connection = printDao.createConnection();
+        this.connection = findDao.createConnection();
 
-        printDao.print(question,this.connection);
+//        findDao.find(question,this.connection);
 
-        printDao.createConnection();
+//        findDao.createConnection();
+
+        question = findDao.find(question,this.connection);
 
         this.connection = null;
 

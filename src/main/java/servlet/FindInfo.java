@@ -1,6 +1,6 @@
 package servlet;
 
-import control.PrintManager;
+import control.FindManager;
 import model.Question;
 
 import javax.servlet.RequestDispatcher;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/PrintInfo")
-public class PrintInfo extends HttpServlet {
+@WebServlet("/FindInfo")
+public class FindInfo extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -27,16 +27,16 @@ public class PrintInfo extends HttpServlet {
 
         // requestオブジェクトから登録情報の取り出し
         int userId = Integer.parseInt(request.getParameter("userId"));
-//        String QuestionItem = request.getParameter("QuestionItem");
-//        int QuestionItemId = Integer.parseInt(request.getParameter("QuestionItemId"));
+        String QuestionItem = null;
+        int QuestionItemId = Integer.parseInt(request.getParameter("QuestionItemId"));
 
 
         // studentのオブジェクトに情報を格納
-        Question question = new Question(QuestionItem, QuestionItemId, userId);
+        Question question = new Question(QuestionItem,QuestionItemId,userId);
 
-        PrintManager manager = new PrintManager();
+        FindManager manager = new FindManager();
 
-        question = manager.print(question);
+        question = manager.find(question);
 
         request.setAttribute("Question",question);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/reply.jsp");

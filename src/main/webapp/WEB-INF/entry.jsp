@@ -20,6 +20,7 @@
         <div class="uk-margin">
             <button class="uk-button uk-button-primary">登録</button>
         </div>
+    </form>
 </div>
 </body>
 </html>

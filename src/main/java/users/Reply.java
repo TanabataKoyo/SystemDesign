@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet
-public class Responsing extends HttpServlet {
+@WebServlet("/Reply")
+public class Reply extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-    public Responsing(){
+    public Reply(){
         super();
     }
     //get
@@ -23,7 +23,7 @@ public class Responsing extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         //request.setAttribute("",);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/responsing.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/beforeReply.jsp");
         dispatcher.forward(request, response);
 
     }

@@ -23,7 +23,10 @@
     <div class="uk-container uk-container-large">
 
     <h2><a href="" class=""></a>Hello QuestionSystem!!</h2>
-    <h4>
+
+        <a href= "/Question_System/Add">アンケート登録はこちらから</a>
+
+        <a href= "/Question_System/Reply">アンケート回答はこちらから</a>
     </div>
 </body>
 

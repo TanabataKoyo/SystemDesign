@@ -1,32 +1,34 @@
 package control;
 
 
-import dao.ResponsingDao;
-import users.Responsing;
+import dao.AnswerDao;
+import model.Answer;
+import model.Question;
+
 
 import java.sql.Connection;
 
-public class ResponsingManager {
+public class AnswerManager {
 
     private Connection connection = null;
 
-    public ResponsingManager() {
+    public AnswerManager() {
 
     }
 
-    public void response(Responsing responsing) {
+    public void reply(Answer answer,Question question) {
 
         //  StudentDAOオブジェクト生成
-        ResponsingDao responsingDao = new ResponsingDao();
+        AnswerDao answerDao = new AnswerDao();
 
         //  DataBaseへ接続し、コネクションオブジェクトを生成する
-        this.connection = responsingDao.createConnection();
+        this.connection = answerDao.createConnection();
 
         //  ResponseオブジェクトをDataBaseに登録する
-        responsingDao.responsing(responsing, this.connection);
+        answerDao.reply(answer, question,this.connection);
 
         //  DataBaseとの接続を切断する
-        responsingDao.closeConnection(this.connection);
+        answerDao.closeConnection(this.connection);
 
         //  コネクションオブジェクトを破棄する
         this.connection = null;
