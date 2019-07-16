@@ -24,9 +24,9 @@
 
     <h2><a href="" class=""></a>Hello QuestionSystem!!</h2>
 
-        <a href= "/Question_System/Add">アンケート登録はこちらから</a>
+        <a href= "/Question_System/Add">アンケート登録</a><br>
 
-        <a href= "/Question_System/Reply">アンケート回答はこちらから</a>
+        <a href= "/Question_System/Reply">アンケート回答</a>
     </div>
 </body>
 

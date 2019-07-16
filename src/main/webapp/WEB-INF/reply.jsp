@@ -26,7 +26,7 @@
         <body bgcolor="skyblue">
         <br>
 
-        <table border="1">
+        <table border="1" width="520"120×100>
             <tr>
                 <td> アンケート内容 </td>
                 <td> <%= question.getQuestionItem() %> </td>
@@ -65,7 +65,10 @@
                 <input type="radio" name="AnswerRank" value="5" id="5">5
         </div>
         <div class="uk-margin">
-            評価理由:<input class="uk-text" type="text" id="AnswerContent" name="AnswerContent">
+            評価理由:<input width="400" height="300" class="uk-text" type="text" size="100" id="AnswerContent" name="AnswerContent">
+        </div>
+        <div>
+            <input type="hidden" id="QuestionItem" name="QuestionItem" value="<%= question.getQuestionItem() %> ">
         </div>
         <div class="uk-margin">
             <button class="uk-button uk-button-primary">登録</button>

@@ -34,4 +34,25 @@ public class AnswerManager {
         this.connection = null;
 
     }
+
+    public Answer search(Answer answer) {
+
+        //  StudentDAOオブジェクト生成
+        AnswerDao answerDao = new AnswerDao();
+
+        //  DataBaseへ接続し、コネクションオブジェクトを生成する
+        this.connection = answerDao.createConnection();
+
+        //  ResponseオブジェクトをDataBaseに登録する
+        answer = answerDao.search(answer,this.connection);
+
+        //  DataBaseとの接続を切断する
+        answerDao.closeConnection(this.connection);
+
+        //  コネクションオブジェクトを破棄する
+        this.connection = null;
+
+        return answer;
+
+    }
 }

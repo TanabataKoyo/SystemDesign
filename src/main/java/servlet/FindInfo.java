@@ -1,6 +1,6 @@
 package servlet;
 
-import control.FindManager;
+import control.QuestionManager;
 import model.Question;
 
 import javax.servlet.RequestDispatcher;
@@ -31,10 +31,10 @@ public class FindInfo extends HttpServlet {
         int QuestionItemId = Integer.parseInt(request.getParameter("QuestionItemId"));
 
 
-        // studentのオブジェクトに情報を格納
+        // questionのオブジェクトに情報を格納
         Question question = new Question(QuestionItem,QuestionItemId,userId);
 
-        FindManager manager = new FindManager();
+        QuestionManager manager = new QuestionManager();
 
         question = manager.find(question);
 

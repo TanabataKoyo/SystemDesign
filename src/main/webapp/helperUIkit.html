@@ -36,9 +36,11 @@
         <!-- 右側 -->
         <div class="uk-navbar-right">
             <div class="uk-navbar-item">
-                <form action="/Sample/User/Show" method="get">
+                <form action="SearchInfo" method="post">
                     <input class="uk-input uk-form-width-small" type="text"
-                           id = "search" name = "search" placeholder="検索">
+                           id = "RespondentId" name = "RespondentId" placeholder="回答者ID">
+                    <input class="uk-input uk-form-width-small" type="text"
+                           id = "QuestionItemId" name = "QuestionItemId" placeholder="アンケート番号">
                     <button class="uk-button uk-button-primary">Search</button>
                 </form>
             </div>

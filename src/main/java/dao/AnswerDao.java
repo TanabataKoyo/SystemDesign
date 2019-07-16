@@ -3,10 +3,7 @@ package dao;
 import model.Answer;
 import model.Question;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class AnswerDao {
 
@@ -50,9 +47,9 @@ public class AnswerDao {
             stmt.setInt(6,answer.getAnswerRank());
             stmt.setString(5,answer.getAnswerContent());
             stmt.setInt(4, question.getUserId());
-            stmt.setString(3, answer.getAnswerContent());
+            stmt.setString(3, question.getQuestionItem());
             stmt.setInt(2,answer.getRespondentId());
-            stmt.setInt(1,question.getQuestionItemId());
+            stmt.setInt(1,answer.getQuestionItemId());
 
 
 
@@ -62,6 +59,45 @@ public class AnswerDao {
 
 //			エラーが発生した場合、エラーの原因を出力する
             e.printStackTrace();
+
+        }
+    }
+
+    public Answer search(Answer answer, Connection connection){
+
+        try{
+
+            //  SQLコマンド
+            String sql = "select * from answer where respondent_id = ? and question_item_id = ?";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+
+            stmt.setInt(2,answer.getQuestionItemId());
+            stmt.setInt(1,answer.getRespondentId());
+            //  SQLのコマンドを実行する
+            //  実行結果はrsに格納される
+            ResultSet rs =  stmt.executeQuery();
+
+            rs.first();
+
+            //  rsからそれぞれの情報を取り出し、Questionオブジェクトに設定する
+            answer.setRespondentId(rs.getInt("respondent_id"));
+            answer.setQuestionItemId(rs.getInt("question_item_id"));
+            answer.setAnswerContent(rs.getString("answer_content"));
+            answer.setAnswerRank(rs.getInt("answer_rank"));
+            //  終了処理
+            stmt.close();
+            rs.close();
+
+            //  Studentオブジェクトを返す
+            return answer;
+
+        }catch(SQLException e){
+
+            //	エラーが発生した場合、エラーの原因を出力し、nullオブジェクトを返す
+            e.printStackTrace();
+            return null;
+
+        }finally{
 
         }
     }

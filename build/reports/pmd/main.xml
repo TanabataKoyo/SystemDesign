@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.8.0" timestamp="2019-07-08T13:21:40.345">
+<file name="/Users/k.battan2/Question_System/src/main/java/control/UserManager.java">
+<violation beginline="13" endline="13" begincolumn="24" endcolumn="33" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="control" class="UserManager" variable="connection" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="36" endline="36" begincolumn="27" endcolumn="30" rule="NullAssignment" ruleset="Error Prone" package="control" class="UserManager" method="entry" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+</file>
+<file name="/Users/k.battan2/Question_System/src/main/java/dao/UsersDao.java">
+<violation beginline="36" endline="36" begincolumn="10" endcolumn="30" rule="EmptyCatchBlock" ruleset="Error Prone" package="dao" class="UsersDao" method="closeConnection" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+</pmd>

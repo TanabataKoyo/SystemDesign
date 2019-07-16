@@ -34,4 +34,21 @@ public class QuestionManager {
         this.connection = null;
 
     }
+
+    public Question find(Question question) {
+
+        QuestionDao questionDao = new QuestionDao();
+
+        this.connection = questionDao.createConnection();
+
+//        findDao.find(question,this.connection);
+
+//        findDao.createConnection();
+
+        question = questionDao.find(question,this.connection);
+
+        this.connection = null;
+
+        return question;
+    }
 }

@@ -4,16 +4,16 @@ public class Answer {
 
     private String AnswerContent;
     private int RespondentId;
-    private int QuestionId;
+    private int QuestionItemId;
     private int AnswerRank;
 
     public void answer(){
 
     }
 
-    public Answer(int RespondentId, String AnswerContent,int AnswerRank){
+    public Answer(int RespondentId, String AnswerContent,int AnswerRank,int QuestionItemId){
         this.AnswerContent = AnswerContent;
-        this.QuestionId = QuestionId;
+        this.QuestionItemId = QuestionItemId;
         this.RespondentId = RespondentId;
         this.AnswerRank = AnswerRank;
     }
@@ -22,8 +22,8 @@ public class Answer {
         return this.RespondentId;
     }
 
-    public int getQuestionId(){
-        return QuestionId;
+    public int getQuestionItemId(){
+        return QuestionItemId;
     }
 
     public String getAnswerContent(){
@@ -42,8 +42,8 @@ public class Answer {
         this.RespondentId = RespondentId;
     }
 
-    public void setQuestionId(int QuestionId) {
-        this.QuestionId = QuestionId;
+    public void setQuestionItemId(int QuestionItemId) {
+        this.QuestionItemId = QuestionItemId;
     }
 
     public void setAnswerRank(int AnswerRank){

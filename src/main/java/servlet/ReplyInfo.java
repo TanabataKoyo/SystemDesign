@@ -36,7 +36,7 @@ public class ReplyInfo extends HttpServlet {
 //        request.getParameter("QuestionItem");
         int UserId = Integer.parseInt(request.getParameter("UserId"));
 
-        Answer answer = new Answer(RespondentId,AnswerContent,AnswerRank);
+        Answer answer = new Answer(RespondentId,AnswerContent,AnswerRank,QuestionItemId);
         Question question = new Question(QuestionItem,QuestionItemId,UserId);
         AnswerManager manager = new AnswerManager();
 
