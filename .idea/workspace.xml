@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3db52ff-d3fc-4019-b24f-44d7449a86fa" name="Default Changelist" comment="o">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/fileContent/annotation-processors.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.3/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/control/AnswerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/AnswerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/control/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/QuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AnswerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AnswerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuestionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuestionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Answer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/FindInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/FindInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ReplyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ReplyInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/SearchInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/SearchInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ShowAnswer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ShowAnswer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/reply.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/helperUIkit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/helperUIkit.html" afterDir="false" />
-    </list>
+    <list default="true" id="f3db52ff-d3fc-4019-b24f-44d7449a86fa" name="Default Changelist" comment="o" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -113,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/servlet/SearchInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ShowAnswer.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -420,12 +389,12 @@
       <workItem from="1562557897472" duration="229000" />
       <workItem from="1562558236958" duration="4479000" />
       <workItem from="1562562887446" duration="903000" />
-      <workItem from="1562563818309" duration="71329000" />
+      <workItem from="1562563818309" duration="71604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110261000" />
+    <option name="totallyTimeSpent" value="110536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -842,7 +811,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/SearchInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -862,7 +831,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ShowAnswer.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
         </state>
       </provider>
     </entry>
